@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    padding: 20px;
+    overflow-x: hidden; /* Agora a página pode rolar no celular */
+}
+
+/* Fundo animado com corações */
+@keyframes floatingHearts {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.heart {
+    position: fixed;
+    font-size: 24px;
+    color: #ff4f7a;
+    animation: floatingHearts 5s linear infinite;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de fade-in nos elementos */
+.container {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message {
+    font-size: 1.8em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    max-width: 80%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Moldura romântica para a foto */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção de contagem regressiva */
+.countdowns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.date {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do botão de tocar música */
+#playMusic {
+    background-color: #ff4f7a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Dancing Script', cursive;
+}
+
+#playMusic:hover {
+    background-color: #ff2f5b;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 0, 100, 0.4);
+}
+
+/* Easter Egg escondido */
+.hidden {
+    display: none;
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de fade-in para o Easter Egg */
+.show {
+    display: block;
+    animation: fadeIn 1.5s ease-in-out;
+}
